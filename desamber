@@ -1,0 +1,9 @@
+#!/bin/bash
+
+y=(`date +%y`)
+m=$(((($(date +%j)-1)/14)+65))
+u=$((((($(date +%j)-1)%14)+1)))
+printf "$y"
+printf "\x$(printf %x $m)"
+printf "%02d" $u 
+printf '\n'
